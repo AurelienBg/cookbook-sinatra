@@ -9,7 +9,13 @@ end
 
 get '/' do  # router part
   'Hello world! -- WELCOME'
-  # [...]   # <- Controller part
-  # [...]   #
+  # [...]   # <- Controller part (ERB = EMBEDDED RUBY)
+end
 
+get '/' do
+  erb :index
+end
+
+get '/about' do
+  erb :about
 end
